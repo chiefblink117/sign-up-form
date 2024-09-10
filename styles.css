@@ -71,7 +71,17 @@ figcaption {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 80%;
-  max-width: 500px;
+  max-width: 600px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-column {
+  width: 48%; /* Slightly less than 50% to account for spacing */
 }
 
 .form-group {
@@ -91,6 +101,7 @@ input {
   border-radius: 4px;
   font-size: 1rem;
 }
+
 button {
   width: 100%;
   padding: 0.75rem;
@@ -101,6 +112,7 @@ button {
   font-size: 1rem;
   cursor: pointer;
 }
+
 button:hover {
   background-color: #0056b3;
 }
@@ -110,12 +122,33 @@ fieldset {
   padding: 0;
   margin: 0 0 1rem 0;
 }
+
 legend {
   font-weight: bold;
   margin-bottom: 0.5rem;
   padding: 0;
 }
+
 section {
   margin-bottom: 1.5rem;
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
   
+  .image-container, .form-container {
+    width: 100%;
+  }
+  
+  .form-column {
+    width: 100%;
+  }
+  
+  .signup-form {
+    width: 90%;
+    max-width: none;
+  }
+}
